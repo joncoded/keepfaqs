@@ -1,0 +1,137 @@
+/* configure here */
+:root {
+  --bg-body: #fff;
+  /* --bg-question: linear-gradient(to bottom, #009900, #00a900, #00cc00); */
+  --bg-question: #090;
+
+  /* --bg-question: #009900;  */
+  --cl-body: #333;
+  --cl-question: #fff;
+  --cl-link: #006600;
+  --fc-ring: 5px solid #000;
+}
+
+body {
+  font-family: "Open Sans", sans-serif;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  font-family: "Armata", Verdana;
+}
+
+/* set styles */
+
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Armata&family=Open+Sans:wght@300;400&display=swap");
+
+*,
+::after,
+::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  background: var(--bg-body);
+  color: var(--cl-body);
+  line-height: 1.5;
+  font-size: 1rem;
+}
+h1,
+h2,
+p {
+  letter-spacing: 0.5px;
+}
+h1 {
+  font-size: 2rem;
+}
+p {
+  font-size: 1rem;
+}
+ul {
+  list-style-type: none;
+}
+a {
+  color: var(--cl-link);
+  text-decoration: underline;
+}
+
+main {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 30px;
+}
+
+/* app */
+
+.container {
+  width: 90vw;
+  display: block;
+}
+
+@media screen and (min-width: 992px) {
+  .container {
+    display: flex;
+    gap: 2rem;
+  }
+}
+
+.tagline {
+  font-size: 1rem;
+  margin-bottom: 30px;
+}
+
+.questions {
+  width: 100%;
+}
+
+.question {
+  margin-bottom: 1.5rem;
+}
+
+.question .button {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  width: 100%;
+  background: var(--bg-question);
+  color: var(--cl-question);
+  padding: 15px;
+  border: 0;
+  text-align: left;
+  cursor: pointer;
+}
+
+.question .button:focus {
+  outline: var(--fc-ring);
+}
+
+.question .symbol {
+  font-family: "Armata";
+  padding-left: 30px;
+  font-size: 2rem;
+}
+
+.question .answer {
+  padding: 15px;
+}
+
+.question .answer p {
+  font-size: 1.25rem;
+  margin-top: 0.5rem auto 0 auto;
+}
+
+/* accessibility */
+.sr-only {
+  position: absolute;
+  left: -10000px;
+  top: auto;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+}
